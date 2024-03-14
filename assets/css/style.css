@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+:root{
+    --cor0: #000;
+    --cor1: #FFF;
+    --cor2: #1F242E;
+    --cor3: #73767C;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    /* border: 1px solid black; */
+}
+body{
+    background-color: var(--cor2);
+    color: var(--cor1);
+}
+a{
+    text-decoration: none;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+.footer{
+    grid-column: 1 / -1;
+    grid-row: 2;
+    height: 100%;
+    background-color: var(--cor3);
+}
+.imgFilter img{
+    filter: grayscale(1);
+}
+.imgFilter img:hover{
+    filter: grayscale(0);
+}
+.displayFlexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* ----- */
+h1{
+    font-family: "Gruppo", sans-serif;
+    font-weight: 400px;
+    font-style: normal;
+
+    margin-bottom: 20px;
+}
+.perfil{
+    flex-direction: column;
+    justify-content: center;
+}
+.perfil img{
+    width: 200px;
+}
+.redesocial ul{
+    display: flex;
+    list-style: none;
+    margin: 30px;
+}
+.redesocial img{
+    width: 50px;
+}
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.skils img{
+    padding-top: 10px;
+    width: 6vw;  
+}
+.certificados{
+    flex-direction: column;
+    align-items: center;   
+}
+.certificados img{
+    width: 30%; 
+}
+.projetos > img{
+    /* height: 220px; */
+    /* max-height: 200px; */
+    width: 10vw;
+    margin: 0px 10px;
+}
+.formulario{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 0.5fr 0.1fr;
+}
+.entrada{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    height: 32px;
+    width: 90%;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+.formulario textarea{
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.formulario button{
+    height: 32px;
+    width: 100px;
+    border-radius: 6px;
+    border: none;
+
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+.formulario p{
+    position: fixed;
+    bottom: 0; 
+    right: 0;
+    margin: 0px 10px 10px 10px;
+}
+/* ----- */
+@media (max-width: 850px){
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .certificados{
+        flex-direction: column; 
+    }
+    .skils img{
+        width: 8vw;  
+    }
+}
+@media (max-width: 1100px){
+
+}
